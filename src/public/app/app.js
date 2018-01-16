@@ -1,13 +1,13 @@
 import angular from 'angular';
 import uirouter from 'angular-ui-router';
-//import routing from './app.config';
+import routing from './app.config';
+import { home } from './features/home/index';
 
 import { AppComponent } from './app.component';
 
 const MODULE_NAME = 'appModule';
 
 
-export default angular.module(MODULE_NAME, [])
-    .component('appComponent', AppComponent);
-    //.controller('AppCtrl', AppCtrl);
-//.config(routing);
+export default angular.module(MODULE_NAME, [uirouter, home])
+    .component('appComponent', AppComponent)
+    .config(routing);

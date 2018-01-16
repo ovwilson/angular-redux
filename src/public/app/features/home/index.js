@@ -1,9 +1,8 @@
 import angular from 'angular';
-import uirouter from 'angular-ui-router';
 
 import routing from './home.routes';
-import HomeController from './home.controller';
+import { HomeComponent } from './home.component';
 
-export default angular.module('app.home', [uirouter])
+export default angular.module('home', [])
     .config(routing)
-    .controller('HomeController', HomeController).title;
+    .component('homeComponent', HomeComponent);

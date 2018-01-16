@@ -1,4 +1,4 @@
-export class HomeController {
+class HomeController {
     constructor() {
         this.title = 'POP criteria';
         this.criteria = [
@@ -8,5 +8,10 @@ export class HomeController {
     }
 }
 
+
+export const HomeComponent = {
+    templete: require('./home.html'),
+    controller: HomeComponent
+}
 
 
