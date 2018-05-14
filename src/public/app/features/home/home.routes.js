@@ -1,3 +1,5 @@
+import uirouter from 'angular-ui-router';
+
 routes.$inject = ['$stateProvider'];
 
 export default function routes($stateProvider) {

@@ -1,6 +1,6 @@
 <!doctype html>
 
-<html lang="en" ng-app="appModule">
+<html lang="en" ng-app="app">
 
 <head>
     <meta charset="UTF-8">
@@ -9,7 +9,9 @@
 </head>
 
 <body>
-    <app-component></app-component>
+    <a ui-sref="home" ui-sref-active="active">Home</a>
+    <a ui-sref="about" ui-sref-active="active">About</a>
+
     <ui-view></ui-view>
     <script src="/bundle.js"></script>
 </body>

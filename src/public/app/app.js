@@ -5,9 +5,8 @@ import { home } from './features/home/index';
 
 import { AppComponent } from './app.component';
 
-const MODULE_NAME = 'appModule';
+const MODULE_NAME = 'app';
 
-
-export default angular.module(MODULE_NAME, [uirouter, home])
-    .component('appComponent', AppComponent)
+export default angular.module(MODULE_NAME, [uirouter])
+    //.component('appComponent', AppComponent)
     .config(routing);
