@@ -1,11 +1,20 @@
+import template from './app.html';
+
 class AppController {
-    constructor(){
-        this.title = 'Pop Criteria';
-    }
+  constructor() {
+    'ngInject';
+    this.title = 'Pop Criteria';
+  }
+  $onInit(){
+    console.log("INIT....");
+  }
+  $onDestroy(){
+
+  }
 }
 
+export const appComponent = {
+  template: template,
+  controller: AppController
+};
 
-export const AppComponent =  {
-    template: require('./app.html'),
-    controller: AppController
-}

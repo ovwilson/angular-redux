@@ -1,6 +1,6 @@
 <!doctype html>
 
-<html lang="en" ng-app="app">
+<html lang="en" >
 
 <head>
     <meta charset="UTF-8">
@@ -8,11 +8,10 @@
     <base href="/">
 </head>
 
-<body>
-    <a ui-sref="home" ui-sref-active="active">Home</a>
-    <a ui-sref="about" ui-sref-active="active">About</a>
+<body ng-app="app" ng-strict-di ng-cloak>
 
-    <ui-view></ui-view>
+    <app>Loading ...</app>
+    
     <script src="/bundle.js"></script>
 </body>
 

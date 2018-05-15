@@ -1,12 +1,11 @@
 import angular from 'angular';
 import uirouter from 'angular-ui-router';
 import routing from './app.config';
-import { home } from './features/home/index';
 
-import { AppComponent } from './app.component';
+import featuresModule from './features/features';
+import { appComponent } from './app.component';
 
-const MODULE_NAME = 'app';
-
-export default angular.module(MODULE_NAME, [uirouter])
-    //.component('appComponent', AppComponent)
-    .config(routing);
+angular
+  .module('app', [uirouter, featuresModule.name])
+  .component('app', appComponent)
+  .config(routing);

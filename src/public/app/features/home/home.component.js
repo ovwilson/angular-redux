@@ -1,17 +1,21 @@
+import template from './home.html';
+
 class HomeController {
     constructor() {
-        this.title = 'POP criteria';
+    
+        this.title = 'Home Sweet Home';
         this.criteria = [
             { title: 'Test', category: 'test' },
             { title: 'Testq', category: 'test' }
-        ]
+        ];
+    }
+    $onInit(){
+        console.log('Home Controller');
     }
 }
 
-
-export const HomeComponent = {
-    templete: require('./home.html'),
-    controller: HomeComponent
-}
-
-
+export const homeComponent = {
+    template: template,
+    controller: HomeController,
+    constrollerAs:'homeCtrl'
+};

@@ -1,1 +1,6 @@
+<navbar></navbar>
+
+<button ng-click="isVisible=!isVisible">Toggle</button>
 <h2>{{$ctrl.title}}</h2>
+<p ng-if="isVisible">Toggled Test</p>
+<ui-view></ui-view>

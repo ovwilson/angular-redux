@@ -1,20 +1,21 @@
 import uirouter from 'angular-ui-router';
+import { homeComponent } from './features/home/home.component';
+import { aboutComponent } from './features/about/about.component';
 
-routing.$inject = ['$stateProvider','$locationProvider'];
+routing.$inject = ['$stateProvider', '$locationProvider'];
 
-export default function routing($stateProvider){
-    const rootState = {
-        name:'home',
-        url: '/home',
-        template: '<h3>ROOT!</h3>'
-      };
+export default function routing($stateProvider) {
 
-      const aboutState = {
-        name:'about',
-        url: '/about',
-        template: '<h3>About!</h3>'
-      };
-     // $stateProvider.state(rootState);
-      $stateProvider.state(aboutState);
+  const rootState = {
+    url: '/home',
+    component: 'home'
+  };
 
+  const aboutState = {
+    url: '/about',
+   component:'about'
+  };
+  
+  $stateProvider.state('home',rootState);
+  $stateProvider.state('about',aboutState);
 }
