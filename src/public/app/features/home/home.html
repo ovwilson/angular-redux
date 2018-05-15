@@ -1,1 +1,5 @@
 <h3>{{$ctrl.title}}</h3>
+<button type="button" ng-click="$ctrl.updateCriteria()">Update Criteria</button>
+<ul>
+    <li ng-repeat="home in $ctrl.criteria.models">{{home.title}}</li>
+</ul>

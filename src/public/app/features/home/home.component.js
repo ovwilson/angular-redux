@@ -1,21 +1,26 @@
 import template from './home.html';
+import { HomeActions } from './home.actions';
 
 class HomeController {
-    constructor() {
-    
-        this.title = 'Home Sweet Home';
-        this.criteria = [
-            { title: 'Test', category: 'test' },
-            { title: 'Testq', category: 'test' }
-        ];
-    }
-    $onInit(){
-        console.log('Home Controller');
-    }
+  constructor($ngRedux, HomeActions) {
+    this.title = 'Home Sweet Home';
+    this.HomeActions = HomeActions;
+    this.store = $ngRedux;
+  }
+  $onInit() {
+    console.log('Home Actions', this.HomeActions);
+    this.store.subscribe(() => {
+        this.criteria = this.store.getState().homes;
+    });
+    this.store.dispatch(this.HomeActions.getHomes());
+  }
+
+  updateCriteria() {
+    this.store.dispatch(this.HomeActions.updateHome({title:'Tooo'}));
+  }
 }
 
 export const homeComponent = {
-    template: template,
-    controller: HomeController,
-    constrollerAs:'homeCtrl'
+  template: template,
+  controller: HomeController
 };

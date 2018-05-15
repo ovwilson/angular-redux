@@ -2,10 +2,9 @@ import uirouter from 'angular-ui-router';
 import { homeComponent } from './features/home/home.component';
 import { aboutComponent } from './features/about/about.component';
 
-routing.$inject = ['$stateProvider', '$locationProvider'];
+config.$inject = ['$stateProvider', '$locationProvider'];
 
-export default function routing($stateProvider) {
-
+export default function config($stateProvider) {
   const rootState = {
     url: '/home',
     component: 'home'
@@ -13,9 +12,9 @@ export default function routing($stateProvider) {
 
   const aboutState = {
     url: '/about',
-   component:'about'
+    component: 'about'
   };
-  
-  $stateProvider.state('home',rootState);
-  $stateProvider.state('about',aboutState);
+
+  $stateProvider.state('home', rootState);
+  $stateProvider.state('about', aboutState);
 }
